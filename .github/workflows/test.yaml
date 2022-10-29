@@ -1,4 +1,4 @@
-name: Python Application Testing
+name: Test Strike API
 
 on: [push]
 
