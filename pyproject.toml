@@ -8,13 +8,24 @@ packages = [{include = "strike_api"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pytest = "^7.2.0"
 requests = "^2.28.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
 flake8 = "^5.0.4"
 bandit = "^1.7.4"
-pytest-cov = "^4.0.0"
-
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = [
+    "pyproject.toml:version"
+]
+branch = "main"
+upload_to_pypi = true
+upload_to_release = true
+build_command = "pip install poetry && poetry build"
