@@ -1,7 +1,7 @@
 import json
 import typing
 
-from base import call_api
+from strike_api.base import call_api
 
 
 def get_invoices(
