@@ -58,7 +58,7 @@ jobs:
     needs: code-quality
     runs-on: ubuntu-latest
     env:
-      STRIKE_API_KEY: ${{ STRIKE_DEV_KEY }}
+      STRIKE_API_KEY: ${{ secrets.STRIKE_DEV_KEY }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
