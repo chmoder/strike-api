@@ -49,7 +49,7 @@ jobs:
         poetry run bandit -r -lll  -f txt -o ci-logs/bandit.log ${{env.PACKAGE_FOLDER}} ${{env.TEST_FOLDER}}
         
     - name: Archive bandit report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: bandit-report
         path: ci-logs/bandit.log
