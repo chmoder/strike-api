@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         python-version: ${{env.PYTHON_VERSION}}
     - name: Install dependencies
@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         python-version: ${{env.PYTHON_VERSION}}
     
@@ -60,7 +60,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         python-version: ${{env.PYTHON_VERSION}}
     
