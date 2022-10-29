@@ -4,7 +4,7 @@ on: [push]
 
 env:
   PYTHON_VERSION: "3.7.14"
-  PROJECT_FOLDER: hapy_pypi
+  PROJECT_FOLDER: strike_api
   TEST_FOLDER: tests
   COVERAGE_LIMIT: 90
     
