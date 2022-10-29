@@ -48,6 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v4
+        with: 
+          python-version: ${{env.PYTHON_VERSION}}
       - name: Publish strike-api
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@release/v1
