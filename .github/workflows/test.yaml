@@ -3,7 +3,7 @@ name: Python Application Testing
 on: [push]
 
 env:
-  PYTHON_VERSION: "3.7.14"
+  PYTHON_VERSION: "3.7"
   PACKAGE_FOLDER: strike_api
   TEST_FOLDER: tests
   COVERAGE_LIMIT: 90
@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v3
+      uses: actions/setup-python@v4
       with:
         python-version: ${{env.PYTHON_VERSION}}
     - name: Install dependencies
@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v3
+      uses: actions/setup-python@v4
       with:
         python-version: ${{env.PYTHON_VERSION}}
     
@@ -60,7 +60,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/checkout@v3
+      uses: actions/setup-python@v4
       with:
         python-version: ${{env.PYTHON_VERSION}}
     
@@ -79,7 +79,7 @@ jobs:
        coverage combine && coverage report --fail-under=${{env.COVERAGE_LIMIT}} -m
        coverage html 
     - name: Archive code coverage html report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: code-coverage-report
         path: htmlcov/index.html
