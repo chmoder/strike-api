@@ -1,4 +1,4 @@
-name: Python package
+name: Publish strike-api
 on:
   push:
     tags:

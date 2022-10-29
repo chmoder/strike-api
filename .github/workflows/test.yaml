@@ -1,4 +1,4 @@
-name: Test Strike API
+name: Test strike-api
 
 on: [push]
 
