@@ -78,7 +78,7 @@ def update_subscription(
     enabled: bool,
     event_type: typing.List[str],
 ) -> dict:
-    """_summary_
+    """Update a subscription
 
     Args:
         subscription_id (str): Id of subscription to update.
