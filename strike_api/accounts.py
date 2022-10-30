@@ -23,3 +23,16 @@ def get_account(
         url = f"https://api.strike.me/v1/accounts/handle/{handle}/profile"
 
     return call_api("GET", url)
+
+
+def test():
+    r"""Sends a HEAD request.
+    :param url: URL for the new :class:`Request` object.
+    :param \*\*kwargs: Optional arguments that ``request`` takes. If
+        `allow_redirects` is not provided, it will be set to `False` (as
+        opposed to the default :meth:`request` behavior).
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
+    """
+    
+    pass
