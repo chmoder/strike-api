@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "strike-api"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Thomas Cross <tom.bz2@gmail.com>"]
 readme = "README.md"
@@ -10,12 +10,13 @@ packages = [{include = "strike_api"}]
 python = "^3.7"
 requests = "^2.28.1"
 
-
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
-flake8 = "^5.0.4"
 bandit = "^1.7.4"
+sphinx = "^5.3.0"
+black = "^22.10.0"
+sphinx-rtd-theme = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core"]
