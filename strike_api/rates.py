@@ -3,7 +3,7 @@ from strike_api.base import call_api
 
 def get_ticker() -> dict:
     """Get currency exchange rate tickers
-    
+
     Response will include list of all possible pairs for the following currencies: BTC, USD, USDT
 
     Returns:

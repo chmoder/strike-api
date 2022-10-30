@@ -2,11 +2,12 @@ import os
 import typing
 import requests
 
+
 def call_api(
-    method: str, 
-    url: str, 
-    headers: typing.Optional[dict] = None, 
-    data: typing.Optional[typing.Union[dict, str]] = None
+    method: str,
+    url: str,
+    headers: typing.Optional[dict] = None,
+    data: typing.Optional[typing.Union[dict, str]] = None,
 ) -> typing.Union[typing.List[dict], dict]:
     """_summary_
 

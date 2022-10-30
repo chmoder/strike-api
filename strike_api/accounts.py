@@ -15,7 +15,7 @@ def get_account(
         handle (typing.Optional[str]): Handle attached to the account to fetch
 
     Returns:
-        dict: account schema 
+        dict: account schema
     """
     if account_id:
         url = f"https://api.strike.me/v1/accounts/{account_id}/profile"
