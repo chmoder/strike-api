@@ -9,3 +9,7 @@ python -m pip install --upgrade pip
 pip install poetry
 poetry install
 ```
+
+## Build Docs
+poetry run sphinx-apidoc -F -o ./docs ../strike_api
+poetry run make clean && poetry run make html
