@@ -8,14 +8,13 @@ Welcome to Strike API documentation!
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
 
    strike_api
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
