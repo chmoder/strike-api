@@ -1,10 +1,7 @@
-strike\_api package
+Strike API
 ===================
 
-Submodules
-----------
-
-strike\_api.accounts module
+Accounts
 ---------------------------
 
 .. automodule:: strike_api.accounts
@@ -12,7 +9,7 @@ strike\_api.accounts module
    :undoc-members:
    :show-inheritance:
 
-strike\_api.base module
+Base
 -----------------------
 
 .. automodule:: strike_api.base
@@ -20,7 +17,7 @@ strike\_api.base module
    :undoc-members:
    :show-inheritance:
 
-strike\_api.events module
+Events
 -------------------------
 
 .. automodule:: strike_api.events
@@ -28,7 +25,7 @@ strike\_api.events module
    :undoc-members:
    :show-inheritance:
 
-strike\_api.invoices module
+Invoices
 ---------------------------
 
 .. automodule:: strike_api.invoices
@@ -36,7 +33,7 @@ strike\_api.invoices module
    :undoc-members:
    :show-inheritance:
 
-strike\_api.rates module
+Rates
 ------------------------
 
 .. automodule:: strike_api.rates
@@ -44,7 +41,7 @@ strike\_api.rates module
    :undoc-members:
    :show-inheritance:
 
-strike\_api.subscriptions module
+Subscriptions
 --------------------------------
 
 .. automodule:: strike_api.subscriptions
@@ -52,10 +49,3 @@ strike\_api.subscriptions module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: strike_api
-   :members:
-   :undoc-members:
-   :show-inheritance:

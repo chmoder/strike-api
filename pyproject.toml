@@ -1,10 +1,15 @@
 [tool.poetry]
 name = "strike-api"
 version = "0.1.2"
-description = ""
+description = "A python client for the strike api"
 authors = ["Thomas Cross <tom.bz2@gmail.com>"]
 readme = "README.md"
 packages = [{include = "strike_api"}]
+
+[tool.poetry.urls]
+"Home Page" = "https://github.com/chmoder/strike-api"
+"Bug Tracker" = "https://github.com/chmoder/strike-api/issues"
+"Documentation" = "https://strike-api.readthedocs.io/en/latest/"
 
 [tool.poetry.dependencies]
 python = "^3.7"

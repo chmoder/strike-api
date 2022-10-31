@@ -9,7 +9,7 @@ def call_api(
     headers: typing.Optional[dict] = None,
     data: typing.Optional[typing.Union[dict, str]] = None,
 ) -> typing.Union[typing.List[dict], dict]:
-    """_summary_
+    """Generic method to interact with strike API endpoints
 
     Args:
         method (str): HTTP Method

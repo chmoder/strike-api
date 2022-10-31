@@ -9,14 +9,15 @@ def get_account(
 ) -> dict:
     """Fetch public account profile info by id or handle
 
-
     Args:
         account_id (typing.Optional[str]): Account id
         handle (typing.Optional[str]): Handle attached to the account to fetch
 
     Returns:
         dict: account schema
+
     """
+
     if account_id:
         url = f"https://api.strike.me/v1/accounts/{account_id}/profile"
     if handle:
