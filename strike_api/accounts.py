@@ -17,7 +17,7 @@ def get_account(
         dict: account schema
 
     """
-    
+
     if account_id:
         url = f"https://api.strike.me/v1/accounts/{account_id}/profile"
     if handle:
