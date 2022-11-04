@@ -11,18 +11,20 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: GET
-    uri: https://api.strike.me/v1/rates/ticker
+    uri: https://api.strike.me/v1/accounts/handle/chmoder/profile
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4quVkrMzS/NK1GyUjIyMDI31zM1MjVQ0lEqzi8tSk51Li0qSs1LrlSyUnIKcVbS
-        USpJLEpPLUESDg12UarVQTLFQM/AwMDAxNLYCJspIOVYTAEZjmKKIcgUQxJMCA12CUF3iKWlpSUO
-        I0KI8gsoRCz1zA0MSAyREBxBYkiKa8BhEgsAAAD//wMAOCzY0KEBAAA=
+        H4sIAAAAAAAAA4TMMWvDMBCG4f9ys2TX2FZtQShtsnRtm6lkOMsnW1SRjCQbSvB/L2lIIFDoeN97
+        PCcY0fWWQIIaj76nAAxwwYRhHyxIGFOaoszzmIL5In5JMYvJBxwoG7wfLOFkYqb8Me/1oxBCPfBS
+        dJpXhD3vqG+5RtJt0TS6FV02ueFpIEcBk/FuUwhRVHVdV0XVtGVdAgOF7o0UmYVApjATAzWHQE4Z
+        iiA/T9fzGyS8fGyBgYk70jjbtL0VjTbSuTwvaCx29oaZ+OoWbxRdxt/Hld2p+/fd3+pV+A89j+th
+        /QEAAP//AwDeIof1YAEAAA==
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 7649b7671c8b62e2-ORD
+      - 7649b7659e652a1e-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -34,7 +36,7 @@ interactions:
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=gMI2EoOCP0RpNvdlYU7vocHkI3YOgiNbBhMX9P..Po0-1667526810-0-AXhFX5NV1vB+QzLRTjLjQJeZfPyFLTcdDzdrNZJCV0U09RAbyLMc4mg7g8r5n3tOFipalETwTolvmPGFVCrHaVQ=;
+      - __cf_bm=4NJGuoa3BLZscsGX8PRB_QfHBNYFHkkhhDbnP9C18CI-1667526810-0-AaFvpR8J1spafdDv7MRcKvQAsHFULozf4GGZwzo5wqedeyx9bk3vTvvgmcVlB+6oz9A21URRdHzDKcUuZ0h0leg=;
         path=/; expires=Fri, 04-Nov-22 02:23:30 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
