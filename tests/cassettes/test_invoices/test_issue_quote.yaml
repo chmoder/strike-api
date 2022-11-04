@@ -1,0 +1,51 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.strike.me/v1/invoices/5f8a40b4-910f-439d-9a61-81fae87f0a8e/quote
+  response:
+    body:
+      string: '{"quoteId":"e6e6f64b-450a-4449-bced-dbbdeaa32e55","description":"Invoice
+        for order 123","lnInvoice":"lnbc525600n1p3k2k3zpp56sk5r56fehldu26ulwtpnmzp24gcapy4hmn3rvwv3rjr4r685ajsdpzf9h8vmmfvdjjqen0wgsx7unyv4ezqvfjxvcqzpgxqzr4fppqqrssf7hwrw7eg067q34cp5t7wcyyfz7ksp5h4t9gyfcfkn98ah4tqza6pskjkch7j6xygw98tqvscm87pzmekds9qyyssq7tshwyld9qk8d7pvqtalafdz06x5k5gcfse4qaplzku8lk2mh345xj6rv5sa34348x6cnmmezapv692zrxdlqzuznserwcpcuuujqvgppuqk4q","onchainAddress":"bc1qqrssf7hwrw7eg067q34cp5t7wcyyfz7k9px5wt","expiration":"2022-11-04T18:31:52.969+00:00","expirationInSec":117,"targetAmount":{"currency":"USD","amount":"10.99"},"sourceAmount":{"currency":"BTC","amount":"0.0005256"},"conversionRate":{"amount":"20909.4368","sourceCurrency":"BTC","targetCurrency":"USD"}}'
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 764f6af8ae0086e4-ORD
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '754'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Nov 2022 18:29:55 GMT
+      Location:
+      - https://api.strike.me/v1/quotes/e6e6f64b-450a-4449-bced-dbbdeaa32e55
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=ZvYim2YB1FjY.0L1SKz6GV6hsVi_kFUAZu7X9lQEjgU-1667586595-0-Adp9HhaRorZiMGEjwmjuOUcRwn0EYHlYrtch2PKUnuNlpRyPuzjIvWCogUiIPOMgFBWPKJ8/kZICKzp4QOnXyPI=;
+        path=/; expires=Fri, 04-Nov-22 18:59:55 GMT; domain=.strike.me; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=300; includeSubDomains
+      Via:
+      - 1.1 google
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+version: 1

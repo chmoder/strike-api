@@ -14,28 +14,35 @@ interactions:
     uri: https://api.strike.me/v1/events
   response:
     body:
-      string: '{"items":[],"count":0}'
+      string: !!binary |
+        H4sIAAAAAAAAA6zPQU4DMQxA0bt4y7hy0mQc5wasQWwQCydxxIgygzpDUVX17ggJtrDhAv/rXWDa
+        7HWF/HiBqUGGEjmxOsYilDBUjljUGlKPtFcvXo1hADvZvN2f3wwyTPNpmart6tF0swYDfFh5XpaX
+        Bzuu0zJDhpODAZpuCvkCNm/Tdr79usWeNFAJKI46hr00FB0dJtfVEnfSZHAd4CedwZP36BxSuHcp
+        e5ej2yViZndDlIm+PnaYTnY8373XausKuethtevwLWQLzceiyNQMQ5cRNUhHFmk1yt7xKP8nrBLI
+        c/cYexAMGiPqyAVr2xcV5Rp9+U1Ikv24i+I4yV/CpwHq8j5vkP31EwAA//8DAE7X84DZAQAA
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 764f2250b8c5e24f-ORD
+      - 764f6aec0daa2919-ORD
       Connection:
       - keep-alive
-      Content-Length:
-      - '22'
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 17:40:18 GMT
+      - Fri, 04 Nov 2022 18:29:52 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=9iI2LYbmgsSUR_e_my3PzOSYBQbz.8lQlN5QCkDWDMo-1667583618-0-Adx1AR75iY+VY+RfRibQVI7Z7zvkl2IFrQZW+M0IZ/ypTdA6jSKXfcNBMl/2RPba+9qaDbismuwPjpHifEruZgs=;
-        path=/; expires=Fri, 04-Nov-22 18:10:18 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=k1diBTWvQk_UWi.TQ9rOQge2iEIxUJfu0A8gzf1Yn3A-1667586592-0-ART4ceoELPrPgEMflpoOFowZh/bR+PvcmnIop9uxK4lnNvK5zkdnM4QbptUfS5Y18a2pbo3Ai5JmlOjkIOPNoOo=;
+        path=/; expires=Fri, 04-Nov-22 18:59:52 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Via:
       - 1.1 google
       X-Content-Type-Options:
