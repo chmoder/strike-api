@@ -1,5 +1,5 @@
 from __future__ import annotations
-from email.quoprimime import quote
+import uuid
 
 import pytest
 
@@ -42,7 +42,7 @@ def test_get_invoice_not_found():
 
 @pytest.mark.vcr
 def test_issue_invoice():
-    correltion_id = "eacc9be4-5079-4420-a846-0297c4532ecb"
+    correltion_id = str(uuid.uuid4())
     description = "Invoice for order 123"
     currency = "USD"
     amount = "1.00"
@@ -62,7 +62,7 @@ def test_issue_invoice():
 @pytest.mark.vcr
 def test_issue_invoice_for_handle():
     handle = "chmoder"
-    correltion_id = "93128847-572d-4c2f-a5b6-f2876e171772"
+    correltion_id = str(uuid.uuid4())
     description = "Invoice for order 123"
     currency = "USD"
     amount = "1.00"
