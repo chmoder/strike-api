@@ -11,20 +11,20 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: GET
-    uri: https://api.strike.me/v1/accounts/handle/chmoder/profile
+    uri: https://api.strike.me/v1/subscriptions
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4TMMWvDMBCG4f9ys2TX2FZtQShtsnRtm6lkOMsnW1SRjCQbSvB/L2lIIFDoeN97
-        PCcY0fWWQIIaj76nAAxwwYRhHyxIGFOaoszzmIL5In5JMYvJBxwoG7wfLOFkYqb8Me/1oxBCPfBS
-        dJpXhD3vqG+5RtJt0TS6FV02ueFpIEcBk/FuUwhRVHVdV0XVtGVdAgOF7o0UmYVApjATAzWHQE4Z
-        iiA/T9fzGyS8fGyBgYk70jjbtL0VjTbSuTwvaCx29oaZ+OoWbxRdxt/Hld2p+/fd3+pV+A89j+th
-        /QEAAP//AwDeIof1YAEAAA==
+        H4sIAAAAAAAAA7yPS26EMBBE79LbYGhM+3uOSTajWdi4E1AmGBkGFEW5e0SUzwEiZVlPVSW98xuM
+        CTwYhw6TVqKT6lFQiEZEbaIgwxJZamt0gAp2jkPOz/flCh6GdZ0X3zT7vtf98JITlzqXp+Zo/HYf
+        uCxjnsDD1kIFPIV45QR+LTeuoC8c1iOCRClF2wqkE0qvWo9dLbXTrrtD9IjHduNpPb3OvIA/wzht
+        eey5/r6ofshtTp/k8l596bkgE0dHgqwKgjR1wiZLQgeFylrnlDb/qUfklazRSWfoD3qXDwAAAP//
+        AwBCy7ESvwEAAA==
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 764a0e8b892128f5-ORD
+      - 764a0e8e6cca2d5e-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -36,7 +36,7 @@ interactions:
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=wx9cll95PmeuOv_qfXkIK8UInyGaEIY5v6NIjt0vtHo-1667530380-0-AWoCkgmJj/kXg9YN5cFwp2VzyOtokSdaRGv9VfqE9kN4ESwLFGIazBx54JdPb8GCAEFfAjg7jFuKJn25vAgpKu0=;
+      - __cf_bm=llwgFPWvTzzRvE5_2vuCB6zLP7YSJ08ag3DCng.bQeE-1667530380-0-AZhFfr6fK1gnUfrCEsNkaRlFX79YbWCyJCL/TEo9A9gomO5NTvsy7AXNvNW6ZDf859X2lVS5xxpP+HoKYKgn3Ug=;
         path=/; expires=Fri, 04-Nov-22 03:23:00 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:

@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.28.1
+    method: DELETE
+    uri: https://api.strike.me/v1/subscriptions/b9cc81c3-8097-419c-a7d0-1ed5f1abfd28
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 764a0e93ef2e2d49-ORD
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 04 Nov 2022 02:53:01 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=D0FqL_4QScjZj74S_NXzLUuuWulnPdjHwC40rHyoQl0-1667530381-0-Ad5nI30QJdlcU2o8iEST27r2bjrFV2J2TouDHTo22NSVH+Pnnh84/Dut0Fij59l+MR/KJ4uI1xdIRj67D1Oen5w=;
+        path=/; expires=Fri, 04-Nov-22 03:23:01 GMT; domain=.strike.me; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=300; includeSubDomains
+      Via:
+      - 1.1 google
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 204
+      message: No Content
+version: 1

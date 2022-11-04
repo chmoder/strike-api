@@ -35,4 +35,5 @@ def call_api(
 
     response = requests.request(method, url, headers=headers, data=data)
 
-    return response.json()
+    if response.content:
+        return response.json()

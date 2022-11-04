@@ -8,6 +8,7 @@ from strike_api.accounts import get_account
 def vcr_config():
     return {"filter_headers": ["Authorization"]}
 
+
 # TODO: find a way to get an account id
 # @pytest.mark.vcr
 # def test_get_account_by_id():
