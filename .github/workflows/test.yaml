@@ -75,11 +75,9 @@ jobs:
 
     - name: Test with pytest
       run: |
-        poetry install
         poetry run pytest ${{env.TEST_FOLDER}}  --cov-report=xml --cov=${{env.PACKAGE_FOLDER}} --junitxml=./coverage.xml
     - name: Code Coverage Summary Report
       run: |
-       pip install coverage
        coverage combine && coverage report --fail-under=${{env.COVERAGE_LIMIT}} -m
        coverage html
        coverage xml
