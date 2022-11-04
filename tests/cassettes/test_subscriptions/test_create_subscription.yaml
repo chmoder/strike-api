@@ -20,12 +20,12 @@ interactions:
     uri: https://api.strike.me/v1/subscriptions
   response:
     body:
-      string: '{"id":"31f96446-2399-486b-b4f6-cfd72ff10824","webhookUrl":"https://www.chmoder.org/hook","webhookVersion":"v1","enabled":true,"created":"2022-11-04T02:53:01.0597828+00:00","eventTypes":["invoice.created","invoice.updated"]}'
+      string: '{"id":"b10dc0dd-ba42-453a-ba77-655fa0461fd6","webhookUrl":"https://www.chmoder.org/hook","webhookVersion":"v1","enabled":true,"created":"2022-11-04T17:40:19.8845476+00:00","eventTypes":["invoice.created","invoice.updated"]}'
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 764a0e910bb6e1d3-ORD
+      - 764f2257b981e0fc-ORD
       Connection:
       - keep-alive
       Content-Length:
@@ -33,14 +33,14 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 02:53:01 GMT
+      - Fri, 04 Nov 2022 17:40:19 GMT
       Location:
-      - https://api.strike.me/v1/subscriptions/31f96446-2399-486b-b4f6-cfd72ff10824
+      - https://api.strike.me/v1/subscriptions/b10dc0dd-ba42-453a-ba77-655fa0461fd6
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=gNjZlrswHUvSQGEXCFAgfF41ac7WXz_kiN7wbma5C6A-1667530381-0-AR+1g3WHra8BOSzROlZESXGKxbABtWTtuWYh6DMhH3auJzj5hVxKE9Ymr/0nFF0efMqzJttUGVSOy9vcluM9Ums=;
-        path=/; expires=Fri, 04-Nov-22 03:23:01 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=VZF_H_0wY52Ub1TrcbjJxudWSobzsaYlSOJCU0nQoP8-1667583619-0-AW/Mf2HyKLUoXpFBooKMlo23dv/1IV6pmfZL8bmpdmk5X80ZLph05VO7t6ljwcNyfKQ8cFRlWnffOp/Q+206ado=;
+        path=/; expires=Fri, 04-Nov-22 18:10:19 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains
