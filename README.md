@@ -3,6 +3,7 @@ A python client for the https://strike.me API.
 
 [![PyPI version](https://badge.fury.io/py/strike-api.svg)](https://badge.fury.io/py/strike-api)
 [![Documentation Status](https://readthedocs.org/projects/strike-api/badge/?version=latest)](https://strike-api.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/github/chmoder/strike-api/branch/main/graph/badge.svg?token=JR81BI9IGR)](https://codecov.io/github/chmoder/strike-api)
 
 
 ## Example Usage
