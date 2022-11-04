@@ -11,18 +11,19 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: GET
-    uri: https://api.strike.me/v1/rates/ticker
+    uri: https://api.strike.me/v1/subscriptions/9a2deb94-485a-4643-8d84-6a5058899567
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4quVkrMzS/NK1GyUjIysDQ007M0NjBQ0lEqzi8tSk51Li0qSs1LrlSyUnIKcVbS
-        USpJLEpPLUESDg12UarVQTLFQM/AwMDAxNzCEJspIOVYTAEZjmaKpaWlJQkmhAa7hKAaYQhyCC5H
-        hBDlF1CImOqZW5IaIiEkBkkIzjCJBQAAAP//AwBlcgI1oQEAAA==
+        H4sIAAAAAAAAA0SMQW6DMBBF7zLbYBjcMbHnHGk3URcGjwoqwcg4oKjq3SMiJVn+p/f+HwwBGJzX
+        QVpHiqzxihr6UDZYUo03aKx1zjRHKGCTto/x9zONwNDnPC9cVdu2lV1/iUFSGdNPtRtv90vSMsQJ
+        GNYaCpDJt6ME4JyuUkCXxOd9gkatVV0rpBNqJmKjS3TaHemAyIh7u8qUT7dZFuAzDNMah07K50Xx
+        Itc5PMj3/x0AAP//AwBZ5E543gAAAA==
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 764f6afbe8a22a48-ORD
+      - 764f6afe7cf72b1c-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -34,7 +35,7 @@ interactions:
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=B68AkpshxpBJ0Zob_DJ6nHkMcUN_2VFz3lR.GhUocZk-1667586595-0-AQA2mTB+xbTnGWHngsn3Ctd5C2yZMWd2G+7ZL7KhvlEI7ZBCrWuxNoMdOnxDXBIcI/zEVxFJzlNd4eJPiq/M6XY=;
+      - __cf_bm=pjIh65YnJlnZoFKwqxgxESDXXNuMruqMHsVBLV07zcQ-1667586595-0-ARsFMREX/Pkux35PeHHKI8fDy0NlK7wUEBrp/zL+gV7TjsNjYZ9OXCITpgmLc88payH2w9c3rnJ23Xm2uZQUNfI=;
         path=/; expires=Fri, 04-Nov-22 18:59:55 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:

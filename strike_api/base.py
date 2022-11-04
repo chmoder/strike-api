@@ -3,25 +3,14 @@ import typing
 import requests
 
 
-def call_api(
-    method: str,
-    url: str,
-    headers: typing.Optional[dict] = None,
-    data: typing.Optional[typing.Union[dict, str]] = None,
-) -> typing.Union[typing.List[dict], dict]:
-    """Generic method to interact with strike API endpoints
+def set_default_headers(headers: typing.Optional[dict] = None) -> dict:
+    """Sets the default headers for strike api HTTP requests
 
     Args:
-        method (str): HTTP Method
-        url (str): Fully qualifed url to interact with a strike endpoint
         headers (typing.Optional[dict], optional): HTTP Headers. Defaults to None.
-        data (typing.Optional[typing.Union[dict, str]], optional): Data to pass to Strike. Defaults to None.
-
-    Raises:
-        EnvironmentError: The Strike API key must be in env
 
     Returns:
-        dict: response from api call
+        dict: headers with default headers included
     """
     strike_api_key = os.environ.get("STRIKE_API_KEY")
     if not strike_api_key:
@@ -33,6 +22,35 @@ def call_api(
     headers["Accept"] = "application/json"
     headers["Authorization"] = f"Bearer {strike_api_key}"
 
-    response = requests.request(method, url, headers=headers, data=data)
+    return headers
 
-    return response.json()
+
+def call_api(
+    method: str,
+    url: str,
+    headers: typing.Optional[dict] = None,
+    params: typing.Optional[typing.Union[dict, str]] = None,
+    data: typing.Optional[typing.Union[dict, str]] = None,
+) -> typing.Union[typing.List[dict], dict]:
+    """Generic method to interact with strike API endpoints
+
+    Args:
+        method (str): HTTP Method
+        url (str): Fully qualifed url to interact with a strike endpoint
+        headers (typing.Optional[dict], optional): HTTP Headers. Defaults to None.
+        params (typing.Optional[typing.Union[dict, str]], optional): params to pass to Strike as query string. Defaults to None.
+        data (typing.Optional[typing.Union[dict, str]], optional): Data to pass to Strike as body. Defaults to None.
+
+    Raises:
+        EnvironmentError: The Strike API key must be in env
+
+    Returns:
+        dict: response from api call
+    """
+
+    headers = set_default_headers(headers)
+
+    response = requests.request(method, url, headers=headers, params=params, data=data)
+
+    if response.content:
+        return response.json()

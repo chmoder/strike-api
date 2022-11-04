@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: '{"correlationId": "93128847-572d-4c2f-a5b6-f2876e171772", "description":
+      "Invoice for order 123", "amount": {"currency": "USD", "amount": "1.00"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '146'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.strike.me/v1/invoices/handle/chmoder
+  response:
+    body:
+      string: '{"invoiceId":"2ca9fcc1-706d-4581-8c65-d1927e2e867d","amount":{"currency":"USD","amount":"1.00"},"state":"UNPAID","created":"2022-11-04T18:29:54.1141909+00:00","correlationId":"93128847-572d-4c2f-a5b6-f2876e171772","description":"Invoice
+        for order 123","issuerId":"df7666c0-36bf-4ead-bed9-faef9188f96b","receiverId":"df7666c0-36bf-4ead-bed9-faef9188f96b"}'
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 764f6af39808e260-ORD
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '354'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Nov 2022 18:29:54 GMT
+      Location:
+      - https://api.strike.me/v1/invoices/2ca9fcc1-706d-4581-8c65-d1927e2e867d
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=DakD7.cKose8I174oSE2JXZwH1br0w_qb.yhQv9WYM4-1667586594-0-AQ+AMTbcR0laMteUmWier7YrzG6Dje07RcrOdi2rOYnYbDNDazyrE9crHkRRY1eOANfnoy1aHX8ZY5GjAgGsD7E=;
+        path=/; expires=Fri, 04-Nov-22 18:59:54 GMT; domain=.strike.me; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=300; includeSubDomains
+      Via:
+      - 1.1 google
+      X-Content-Type-Options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+version: 1
