@@ -24,6 +24,6 @@ def get_account(
     elif handle and not account_id:
         url = f"https://api.strike.me/v1/accounts/handle/{handle}/profile"
     else:
-        raise ValueError("use either account_id or handle")        
+        raise ValueError("use either account_id or handle")
 
     return call_api("GET", url)
