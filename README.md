@@ -23,6 +23,7 @@ poetry install
 
 ## Build Docs
 ```
-poetry run sphinx-apidoc -f -o ./docs ../strike_api
-cd docs && poetry run make clean && poetry run make html
+cd docs
+poetry run sphinx-apidoc -f -o . ../strike_api
+poetry run make clean && poetry run make html
 ```
