@@ -60,7 +60,7 @@ def issue_invoice(
         amount (str, optional): Currency amount in decimal format. Defaults to None.
 
     Returns:
-        dict: _description_
+        dict: invoice
     """
     if handle:
         url = f"https://api.strike.me/v1/invoices/handle/{handle}"
@@ -87,7 +87,7 @@ def issue_quote(invoice_id: str) -> dict:
         invoice_id (str): Id of invoice for which the quote is requested
 
     Returns:
-        dict: invoice
+        dict: quote
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}/quote"
 
@@ -103,7 +103,7 @@ def cancel_invoice(invoice_id: str) -> dict:
         invoice_id (str): Id of invoice for which the cancellation is requested
 
     Returns:
-        dict: schema
+        dict: invoice
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}/cancel"
 
