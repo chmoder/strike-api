@@ -8,10 +8,11 @@ from strike_api.accounts import get_account
 def vcr_config():
     return {"filter_headers": ["Authorization"]}
 
-
+# TODO: find a way to get an account id
 # @pytest.mark.vcr
 # def test_get_account_by_id():
-#     assert isinstance(get_account(account_id="953680ce-2149-4ce2-a5e3-82bb9a57be41"), list)
+#     account = get_account(account_id="953680ce-2149-4ce2-a5e3-82bb9a57be41")
+#     assert isinstance(account["handle"], "chmoder")
 
 
 @pytest.mark.vcr
