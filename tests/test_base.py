@@ -17,7 +17,8 @@ def test_missing_strike_api_key():
     os.environ["STRIKE_API_KEY"] = ""
 
     with pytest.raises(EnvironmentError) as excinfo:
-        call_api()
+        call_api("GET", "https://www.chmoder.org")
+
     assert "STRIKE_API_KEY not found" in str(excinfo.value)
 
     os.environ["STRIKE_API_KEY"] = strike_api_key
