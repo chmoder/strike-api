@@ -39,5 +39,3 @@ def get_events(
     payload = {"filter": filter_, "orderby": orderby, "skip": skip, "top": top}
 
     return call_api("GET", url, params=payload)
-
-get_events()
