@@ -21,9 +21,14 @@ pip install poetry
 poetry install
 ```
 
-## Build Docs
+### Build Docs
 ```
 cd docs
 poetry run sphinx-apidoc -f -o . ../strike_api
 poetry run make clean && poetry run make html
+```
+
+### Run Tests
+```
+poetry run pytest --record-mode=once
 ```
