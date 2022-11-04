@@ -9,11 +9,14 @@ def vcr_config():
     return {"filter_headers": ["Authorization"]}
 
 
-# TODO: find a way to get an account id
-# @pytest.mark.vcr
-# def test_get_account_by_id():
-#     account = get_account(account_id="953680ce-2149-4ce2-a5e3-82bb9a57be41")
-#     assert isinstance(account["handle"], "chmoder")
+@pytest.mark.vcr
+def test_get_account_by_id_not_found():
+    response = get_account(account_id="953680ce-2149-4ce2-a5e3-82bb9a57be41")
+    data = response["data"]
+    status = data["status"]
+    assert isinstance(response, dict)
+    assert isinstance(data, dict)
+    assert status == 404
 
 
 @pytest.mark.vcr
