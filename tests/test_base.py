@@ -5,6 +5,7 @@ import pytest
 
 from strike_api.base import call_api
 
+
 @pytest.fixture(scope="module")
 def vcr_config():
     return {"filter_headers": ["Authorization"]}
@@ -18,5 +19,5 @@ def test_missing_strike_api_key():
     with pytest.raises(EnvironmentError) as excinfo:
         call_api()
     assert "STRIKE_API_KEY not found" in str(excinfo.value)
-    
+
     os.environ["STRIKE_API_KEY"] = strike_api_key
