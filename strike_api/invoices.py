@@ -6,7 +6,7 @@ from strike_api.base import call_api
 
 def get_invoices(
     filter_: str = None, orderby: str = None, skip: int = None, top: int = None
-) -> typing.List[dict]:
+) -> dict:
     """Get Invoices
     Required scopes: partner.webhooks.manage
     OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`_.
@@ -18,7 +18,7 @@ def get_invoices(
         top (int, optional): Get the top X number of records. Default value: 50. Max value: 100. Defaults to None.
 
     Returns:
-       typing.List[dict]: invoices
+       dict: invoices
     """
     url = "https://api.strike.me/v1/invoices"
 
