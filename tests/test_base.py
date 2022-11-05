@@ -13,7 +13,7 @@ def vcr_config():
 
 @pytest.mark.vcr
 def test_missing_strike_api_key():
-    strike_api_key = os.environ.get("STRIKE_API_KEY")
+    strike_api_key = os.environ.get("STRIKE_API_KEY", "")
     os.environ["STRIKE_API_KEY"] = ""
 
     with pytest.raises(EnvironmentError) as excinfo:

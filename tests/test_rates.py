@@ -11,4 +11,6 @@ def vcr_config():
 
 @pytest.mark.vcr
 def test_get_ticker():
-    assert isinstance(get_ticker(), list)
+    rates = get_ticker()
+    count = len([i for i in rates])
+    assert isinstance(count, int)
