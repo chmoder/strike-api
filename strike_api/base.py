@@ -33,7 +33,9 @@ def call_api(
     headers: typing.Optional[typing.Dict[str, str]] = None,
     params: typing.Optional[typing.Union[typing.Dict[str, typing.Any], str]] = None,
     data: typing.Optional[typing.Union[typing.Dict[str, str], str]] = None,
-) -> typing.Union[typing.Dict[str, typing.Any], typing.List[typing.Dict[str, typing.Any]]]:
+) -> typing.Union[
+    typing.Dict[str, typing.Any], typing.List[typing.Dict[str, typing.Any]]
+]:
     """Generic method to interact with strike API endpoints
 
     Args:
