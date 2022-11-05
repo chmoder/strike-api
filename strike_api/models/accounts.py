@@ -7,13 +7,13 @@ from strike_api.models.generic import StrikeAPIModel
 
 class Currency(StrikeAPIModel):
     currency: str
-    isDefaultCurrency: bool
-    isAvailable: bool
-    isInvoiceable: bool
+    is_default_currency: bool
+    is_available: bool
+    is_invoiceable: bool
 
 
 class Account(StrikeAPIModel):
     handle: str
-    avatarUrl: str
-    canReceive: bool
+    avatar_url: str
+    can_receive: bool
     currencies: List[Currency]

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "strike-api"
-version = "0.1.6"
+version = "0.2.0"
 description = "A python client for the strike api"
 authors = ["Thomas Cross <tom.bz2@gmail.com>"]
 readme = "README.md"
@@ -15,6 +15,7 @@ packages = [{include = "strike_api"}]
 python = "^3.7"
 requests = "^2.28.1"
 pydantic = "^1.10.2"
+pyhumps = "^3.8.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"

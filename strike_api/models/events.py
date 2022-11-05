@@ -11,11 +11,11 @@ class Data(StrikeAPIModel):
 
 class Event(StrikeAPIModel):
     id: str
-    eventType: str
-    webhookVersion: str
+    event_type: str
+    webhook_version: str
     data: Data
     created: str
-    deliverySuccess: bool
+    delivery_success: bool
 
 
 class Events(StrikeAPIModel):

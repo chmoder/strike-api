@@ -7,11 +7,11 @@ from strike_api.models.generic import StrikeAPIModel
 
 class Subscription(StrikeAPIModel):
     id: str
-    webhookUrl: str
-    webhookVersion: str
+    webhook_url: str
+    webhook_version: str
     enabled: bool
     created: str
-    eventTypes: List[str]
+    event_types: List[str]
 
 
 class Subscriptions(StrikeAPIModel):

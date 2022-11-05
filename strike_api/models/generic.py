@@ -1,6 +1,6 @@
 from __future__ import annotations
+import humps
 import re
-import typing
 
 from pydantic import BaseModel
 
@@ -13,11 +13,10 @@ def to_snake_case(name: str) -> str:
 
 
 class StrikeAPIModel(BaseModel):
-    pass
-    # class Config:
-    #     alias_generator = to_snake_case
+    class Config:
+        alias_generator = humps.camelize
 
 
-class ItemsResponse(BaseModel):
-    items: typing.List[typing.Any]
+class ItemsResponse(StrikeAPIModel):
+    items: StrikeAPIModel
     count: int

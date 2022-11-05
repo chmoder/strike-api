@@ -15,17 +15,17 @@ class SourceAmount(StrikeAPIModel):
 
 class ConversionRate(StrikeAPIModel):
     amount: str
-    sourceCurrency: str
-    targetCurrency: str
+    source_currency: str
+    target_currency: str
 
 
 class Quote(StrikeAPIModel):
-    quoteId: str
+    quote_id: str
     description: str
-    lnInvoice: str
-    onchainAddress: str
+    ln_invoice: str
+    onchain_address: str
     expiration: str
-    expirationInSec: int
-    targetAmount: TargetAmount
-    sourceAmount: SourceAmount
-    conversionRate: ConversionRate
+    expiration_in_sec: int
+    target_amount: TargetAmount
+    source_amount: SourceAmount
+    conversion_rate: ConversionRate

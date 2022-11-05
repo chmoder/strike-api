@@ -23,10 +23,10 @@ class Invoice(StrikeAPIModel):
     amount: Amount
     state: str
     created: str
-    correlationId: str
+    correlation_id: str
     description: str
-    issuerId: str
-    receiverId: str
+    issuer_id: str
+    receiver_id: str
 
 
 class Invoices(StrikeAPIModel):

@@ -7,8 +7,8 @@ from strike_api.models.generic import StrikeAPIModel
 
 class Rate(StrikeAPIModel):
     amount: str
-    sourceCurrency: str
-    targetCurrency: str
+    source_currency: str
+    target_currency: str
 
 
 class Rates(StrikeAPIModel):
