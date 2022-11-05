@@ -34,4 +34,4 @@ def test_get_event():
     event = get_event(event_id)
 
     assert isinstance(event, Event)
-    assert event.eventType == "invoice.created"
+    assert event.event_type == "invoice.created"

@@ -14,3 +14,4 @@ def test_get_ticker():
     rates = get_ticker()
     count = len([i for i in rates])
     assert isinstance(count, int)
+    assert float(rates[0].amount) > 0

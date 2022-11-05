@@ -26,7 +26,7 @@ def test_get_subscriptions():
 @pytest.mark.vcr
 def test_get_subscription():
     subscription = get_subscription("9a2deb94-485a-4643-8d84-6a5058899567")
-    assert isinstance(subscription.eventTypes, list)
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr
@@ -39,7 +39,7 @@ def test_create_subscription():
         ["invoice.created", "invoice.updated"],
     )
 
-    assert isinstance(subscription.eventTypes, list)
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr
@@ -53,7 +53,7 @@ def test_update_subscription():
         ["invoice.created", "invoice.updated"],
     )
 
-    assert isinstance(subscription.eventTypes, list)
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr

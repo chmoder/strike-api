@@ -23,7 +23,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 765658ab7c44633c-ORD
+      - 76568a34a9dee213-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -31,12 +31,12 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 05 Nov 2022 14:40:45 GMT
+      - Sat, 05 Nov 2022 15:14:34 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=6ZKI82ruH6ah9lLOfuhm2hHYFUbpw5j8.BJOiV9OPLA-1667659245-0-AYx4lk7M5o5OBuiGYgiYI82nRsQuUsPZpE4L+m/jt+9HIGwHzwg0HUu2+aedbl56AhO6BpBSdYTo7OZZzXKh774=;
-        path=/; expires=Sat, 05-Nov-22 15:10:45 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=rrSR3NQj7bv0bAElG2XD28ecl31I1SztYF0O9McD5M8-1667661274-0-AX2EHtwogJBu46WxRTRwrUHo89ZEMsA1UHeVcN/uEyC2E/9VCcb6F7Eotu3Xiu1EXqG2nCZHm3bbe2Uew439+JY=;
+        path=/; expires=Sat, 05-Nov-22 15:44:34 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains

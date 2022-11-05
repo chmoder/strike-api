@@ -87,4 +87,4 @@ def test_issue_quote():
     invoice_id = "5f8a40b4-910f-439d-9a61-81fae87f0a8e"
 
     quote = issue_quote(invoice_id)
-    assert len(quote.quoteId) > 0
+    assert len(quote.quote_id) > 0
