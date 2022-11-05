@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"correlationId": "fb029397-2f5d-440a-ba56-911a7238eca4", "description":
+    body: '{"correlationId": "2b1feb1c-4ed2-485c-9ef3-a2434c5463a9", "description":
       "Invoice for order 123", "amount": {"currency": "USD", "amount": "1.00"}}'
     headers:
       Accept:
@@ -19,13 +19,13 @@ interactions:
     uri: https://api.strike.me/v1/invoices
   response:
     body:
-      string: '{"invoiceId":"e30fa3dd-27c9-45ae-8ffe-7930b405d62c","amount":{"currency":"USD","amount":"1.00"},"state":"UNPAID","created":"2022-11-04T20:31:25.4769904+00:00","correlationId":"fb029397-2f5d-440a-ba56-911a7238eca4","description":"Invoice
+      string: '{"invoiceId":"5439b0c5-31cf-4f35-85b6-f18da629f8ec","amount":{"currency":"USD","amount":"1.00"},"state":"UNPAID","created":"2022-11-05T14:40:46.0431903+00:00","correlationId":"2b1feb1c-4ed2-485c-9ef3-a2434c5463a9","description":"Invoice
         for order 123","issuerId":"df7666c0-36bf-4ead-bed9-faef9188f96b","receiverId":"df7666c0-36bf-4ead-bed9-faef9188f96b"}'
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 76501cf78c0d6356-ORD
+      - 765658af38e02c0b-ORD
       Connection:
       - keep-alive
       Content-Length:
@@ -33,14 +33,14 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 20:31:25 GMT
+      - Sat, 05 Nov 2022 14:40:46 GMT
       Location:
-      - https://api.strike.me/v1/invoices/e30fa3dd-27c9-45ae-8ffe-7930b405d62c
+      - https://api.strike.me/v1/invoices/5439b0c5-31cf-4f35-85b6-f18da629f8ec
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=TcPRwTskf8WnUilnwLTlIvH6Ipg4j04RgHrt3KkH108-1667593885-0-AecJ/mus1Afwe5BZ2dToGQMTBGNBZvsCU7mRkQpBC46qVyg+vyjS6mVXfP//iLUeoAGFAJA7riDdavHamtltWUA=;
-        path=/; expires=Fri, 04-Nov-22 21:01:25 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=bxv9U5_b9vntoSD8QdzaZrnHG_3hQ93nSgqXOl7tnnQ-1667659246-0-Ad4lBIBoQji1L8RwP6xeyG3c3R9tRKeg4Yo3gP0s+kpn+BzIpZe8yYQAB3XzFsqTgf1WnO13VH8tR+/2rnMlTIk=;
+        path=/; expires=Sat, 05-Nov-22 15:10:46 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains

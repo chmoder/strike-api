@@ -1,7 +1,7 @@
 interactions:
 - request:
     body: '{"webhookUrl": "https://www.chmoder.org/hook", "webhookVersion": "v1",
-      "secret": "fake_secret", "enabled": "true", "eventTypes": ["invoice.created",
+      "secret": "fake_secret", "enabled": true, "eventTypes": ["invoice.created",
       "invoice.updated"]}'
     headers:
       Accept:
@@ -11,7 +11,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '168'
+      - '166'
       Content-Type:
       - application/json
       User-Agent:
@@ -20,12 +20,12 @@ interactions:
     uri: https://api.strike.me/v1/subscriptions
   response:
     body:
-      string: '{"id":"ef44e311-ec59-467b-8ddf-38784edda1c1","webhookUrl":"https://www.chmoder.org/hook","webhookVersion":"v1","enabled":true,"created":"2022-11-04T20:31:27.6192137+00:00","eventTypes":["invoice.created","invoice.updated"]}'
+      string: '{"id":"3bd48257-f022-41d0-82b4-746dc8851713","webhookUrl":"https://www.chmoder.org/hook","webhookVersion":"v1","enabled":true,"created":"2022-11-05T14:40:48.0956949+00:00","eventTypes":["invoice.created","invoice.updated"]}'
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 76501d04ff552aa8-ORD
+      - 765658bc1b0b2a45-ORD
       Connection:
       - keep-alive
       Content-Length:
@@ -33,14 +33,14 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 20:31:27 GMT
+      - Sat, 05 Nov 2022 14:40:48 GMT
       Location:
-      - https://api.strike.me/v1/subscriptions/ef44e311-ec59-467b-8ddf-38784edda1c1
+      - https://api.strike.me/v1/subscriptions/3bd48257-f022-41d0-82b4-746dc8851713
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=HKgx9lKmIBwMpjz65o8a7_1yuCVjZczu.1Jwjlqdb0Q-1667593887-0-AU3Vmutwm0DW+t1b+ABy8TJNwi6njjspzCckCogU/JkNw6+87fwlYcoYTPl/bO9AH0puf+gQcNE+nJRAvlXLfmA=;
-        path=/; expires=Fri, 04-Nov-22 21:01:27 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=OwnD5lAr6h94YXyqgz5S7SY5thOC32.BurGPv_v2dyA-1667659248-0-ARhxVoVAsTrV04V2TYB8TN/M697IjLGIXOaTTKM5Kn4YQO77bjx75jfWvh+HDzg3JH9xEO+dGXGQI9+qCGIth0s=;
+        path=/; expires=Sat, 05-Nov-22 15:10:48 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains

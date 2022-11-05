@@ -1,7 +1,7 @@
 interactions:
 - request:
     body: '{"webhookUrl": "https://www.chmoder.org/hook2", "webhookVersion": "v1",
-      "secret": "fake_secret", "enabled": "true", "eventTypes": ["invoice.created",
+      "secret": "fake_secret", "enabled": true, "eventTypes": ["invoice.created",
       "invoice.updated"]}'
     headers:
       Accept:
@@ -11,37 +11,38 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '169'
+      - '167'
       Content-Type:
       - application/json
       User-Agent:
       - python-requests/2.28.1
     method: PATCH
-    uri: https://api.strike.me/v1/subscriptions/b9cc81c3-8097-419c-a7d0-1ed5f1abfd28
+    uri: https://api.strike.me/v1/subscriptions/ef44e311-ec59-467b-8ddf-38784edda1c1
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAyTIwQqCQBAG4FeR/7zEEkowZ4kCUxLXqwy7U6dccGZP4rtH9B2/HbZxlHsCwd8e
-        3Riac3eZn4H8XwOHxMagHWpsRUG1rx1iTgJCP0zLdQh9C4ePqPL7t6NoLluUas1WvXJZ0wnH8QUA
-        AP//AwDDLqMAbQAAAA==
+        H4sIAAAAAAAAA0SMyw6CMBBF/2W2UuiUymO+A90YF9COQkRKSoEY478bTNTlPTn3PKGzQMAXrTlF
+        FGz2pdBZ3ojC2otIi7zQbG2NBiGClZvWudvB90DQhjBOlCTrusamvTvLPnb+mmyG+stH9lPnBiBY
+        tgQPddOzBQp+5giM5zpsE5RUSiAKqSslKUVSeZxhqTDdSUlSbt+Fh1A9Rp6ATtANi+sMx99E9CPz
+        aD/k/HoDAAD//wMAFpQfc98AAAA=
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 76501d067d382a81-ORD
+      - 765658bd5a5f6338-ORD
       Connection:
       - keep-alive
       Content-Encoding:
       - gzip
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 20:31:27 GMT
+      - Sat, 05 Nov 2022 14:40:48 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=Hyj1iWM5CBfYhLdsIEh3kqUHIf1qaIF7YU5laFTXcso-1667593887-0-AXARzmp6HLZzGX/M3BDM7D/JA8lj8rOsba/ufMPqlG5IzpNt7v0OFWDrGXShgZNibT46aDfkwPQX+n+AV9h3x3A=;
-        path=/; expires=Fri, 04-Nov-22 21:01:27 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=sVBOsRS6LFdg34_99FdwsJPIj5MeuvIsFBP17NZTyiY-1667659248-0-AZ+UmSBynx6m2Kj6KgtDKiYd5BUErECyHLc3ni3fLCAs8+Z4u+nw16HsJHsCSDnm2FV3SWiH7gG4MV10tdNCZro=;
+        path=/; expires=Sat, 05-Nov-22 15:10:48 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains
@@ -52,6 +53,6 @@ interactions:
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
 version: 1
