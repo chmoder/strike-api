@@ -4,8 +4,8 @@ import requests
 
 
 def set_default_headers(
-    headers: typing.Optional[dict[str, str]] = None
-) -> dict[str, str]:
+    headers: typing.Optional[typing.Dict[str, str]] = None
+) -> typing.Dict[str, str]:
     """Sets the default headers for strike api HTTP requests
 
     Args:
@@ -30,10 +30,10 @@ def set_default_headers(
 def call_api(
     method: str,
     url: str,
-    headers: typing.Optional[dict[str, str]] = None,
-    params: typing.Optional[typing.Union[dict[str, typing.Any], str]] = None,
-    data: typing.Optional[typing.Union[dict[str, str], str]] = None,
-) -> typing.Union[dict[str, typing.Any], typing.List[dict[str, typing.Any]]]:
+    headers: typing.Optional[typing.Dict[str, str]] = None,
+    params: typing.Optional[typing.Union[typing.Dict[str, typing.Any], str]] = None,
+    data: typing.Optional[typing.Union[typing.Dict[str, str], str]] = None,
+) -> typing.Union[typing.Dict[str, typing.Any], typing.List[typing.Dict[str, typing.Any]]]:
     """Generic method to interact with strike API endpoints
 
     Args:
