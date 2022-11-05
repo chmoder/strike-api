@@ -3,7 +3,9 @@ import typing
 import requests
 
 
-def set_default_headers(headers: typing.Optional[dict] = None) -> dict:
+def set_default_headers(
+    headers: typing.Optional[dict[str, str]] = None
+) -> dict[str, str]:
     """Sets the default headers for strike api HTTP requests
 
     Args:
@@ -28,10 +30,10 @@ def set_default_headers(headers: typing.Optional[dict] = None) -> dict:
 def call_api(
     method: str,
     url: str,
-    headers: typing.Optional[dict] = None,
-    params: typing.Optional[typing.Union[dict, str]] = None,
-    data: typing.Optional[typing.Union[dict, str]] = None,
-) -> typing.Union[typing.List[dict], dict]:
+    headers: typing.Optional[dict[str, str]] = None,
+    params: typing.Optional[typing.Union[dict[str, typing.Any], str]] = None,
+    data: typing.Optional[typing.Union[dict[str, str], str]] = None,
+) -> typing.Union[dict[str, typing.Any], typing.List[dict[str, typing.Any]]]:
     """Generic method to interact with strike API endpoints
 
     Args:
@@ -45,12 +47,14 @@ def call_api(
         EnvironmentError: The Strike API key must be in env
 
     Returns:
-        dict: response from api call
+        typing.Any: response from api call
     """
 
     headers = set_default_headers(headers)
-
     response = requests.request(method, url, headers=headers, params=params, data=data)
+    response.raise_for_status()
 
     if response.content:
         return response.json()
+    else:
+        return {}

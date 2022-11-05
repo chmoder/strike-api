@@ -1,10 +1,11 @@
 import typing
 from strike_api.base import call_api
+from strike_api.models.events import Event, EventItems
 
 
 def get_event(
     event_id: str,
-) -> dict:
+) -> Event:
     """Find event by id
 
     Args:
@@ -15,12 +16,16 @@ def get_event(
     """
     url = f"https://api.strike.me/v1/events/{event_id}"
 
-    return call_api("GET", url)
+    response = call_api("GET", url)
+    return Event.parse_obj(response)
 
 
 def get_events(
-    filter_: str = None, orderby: str = None, skip: int = None, top: int = None
-) -> dict:
+    filter_: typing.Optional[str] = None,
+    orderby: typing.Optional[str] = None,
+    skip: typing.Optional[int] = None,
+    top: typing.Optional[int] = None,
+) -> EventItems:
     """Get Events
     Required scopes: partner.webhooks.manage
     OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`_.
@@ -38,4 +43,5 @@ def get_events(
 
     payload = {"filter": filter_, "orderby": orderby, "skip": skip, "top": top}
 
-    return call_api("GET", url, params=payload)
+    response = call_api("GET", url, params=payload)
+    return EventItems.parse_obj(response)
