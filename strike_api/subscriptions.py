@@ -2,9 +2,10 @@ import typing
 import json
 
 from strike_api.base import call_api
+from strike_api.models.subscriptions import Subscription, Subscriptions
 
 
-def get_subscriptions() -> typing.List[dict]:
+def get_subscriptions() -> Subscriptions:
     """Get subscriptions
 
     Returns:
@@ -13,10 +14,11 @@ def get_subscriptions() -> typing.List[dict]:
 
     url = f"https://api.strike.me/v1/subscriptions"
 
-    return call_api("GET", url)
+    response = call_api("GET", url)
+    return Subscriptions.parse_obj(response)
 
 
-def get_subscription(subscription_id: str) -> dict:
+def get_subscription(subscription_id: str) -> Subscription:
     """Get subscription by id
 
     Args:
@@ -29,7 +31,8 @@ def get_subscription(subscription_id: str) -> dict:
 
     headers = {"Accept": "application/json"}
 
-    return call_api("GET", url, headers=headers)
+    response = call_api("GET", url, headers=headers)
+    return Subscription.parse_obj(response)
 
 
 def create_subscription(
@@ -38,7 +41,7 @@ def create_subscription(
     secret: str,
     enabled: bool,
     event_type: typing.List[str],
-) -> dict:
+) -> Subscription:
     """Create a new subscription
 
     You can create at most 50 subscriptions
@@ -67,7 +70,8 @@ def create_subscription(
 
     headers = {"Content-Type": "application/json"}
 
-    return call_api("POST", url, headers=headers, data=payload)
+    response = call_api("POST", url, headers=headers, data=payload)
+    return Subscription.parse_obj(response)
 
 
 def update_subscription(
@@ -77,7 +81,7 @@ def update_subscription(
     secret: str,
     enabled: bool,
     event_type: typing.List[str],
-) -> dict:
+) -> Subscription:
     """Update a subscription
 
     Args:
@@ -104,10 +108,11 @@ def update_subscription(
         }
     )
 
-    return call_api("PATCH", url, headers=headers, data=payload)
+    response = call_api("PATCH", url, headers=headers, data=payload)
+    return Subscription.parse_obj(response)
 
 
-def delete_subscription(subscription_id: str) -> dict:
+def delete_subscription(subscription_id: str) -> None:
     """Delete a subscription
 
     Args:
@@ -118,4 +123,5 @@ def delete_subscription(subscription_id: str) -> dict:
     """
     url = f"https://api.strike.me/v1/subscriptions/{subscription_id}"
 
-    return call_api("DELETE", url)
+    call_api("DELETE", url)
+    return None

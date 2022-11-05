@@ -19,13 +19,14 @@ def vcr_config():
 @pytest.mark.vcr
 def test_get_subscriptions():
     subscriptions = get_subscriptions()
-    assert isinstance(subscriptions, list)
+    count = len([i for i in subscriptions])
+    assert isinstance(count, int)
 
 
 @pytest.mark.vcr
 def test_get_subscription():
     subscription = get_subscription("9a2deb94-485a-4643-8d84-6a5058899567")
-    assert isinstance(subscription, dict)
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr
@@ -34,25 +35,25 @@ def test_create_subscription():
         "https://www.chmoder.org/hook",
         "v1",
         "fake_secret",
-        "true",
+        True,
         ["invoice.created", "invoice.updated"],
     )
-    print(subscription)
-    assert isinstance(subscription, dict)
+
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr
 def test_update_subscription():
     subscription = update_subscription(
-        "b9cc81c3-8097-419c-a7d0-1ed5f1abfd28",
+        "ef44e311-ec59-467b-8ddf-38784edda1c1",
         "https://www.chmoder.org/hook2",
         "v1",
         "fake_secret",
-        "true",
+        True,
         ["invoice.created", "invoice.updated"],
     )
-    print(subscription)
-    assert isinstance(subscription, dict)
+
+    assert isinstance(subscription.event_types, list)
 
 
 @pytest.mark.vcr

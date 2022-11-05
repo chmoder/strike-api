@@ -16,28 +16,28 @@ interactions:
     uri: https://api.strike.me/v1/invoices/5f8a40b4-910f-439d-9a61-81fae87f0a8e/quote
   response:
     body:
-      string: '{"quoteId":"520b6082-185f-46e6-9b70-a72053420ca2","description":"Invoice
-        for order 123","lnInvoice":"lnbc521300n1p3k2a57pp5a05nuumnylpuevn2jak6upra70lpnlvun2ra7wtsleg7tk4hvrxqdpzf9h8vmmfvdjjqen0wgsx7unyv4ezqvfjxvcqzpgxqzr4fppqnhlaufynawqhjwjrkvhuzpcm3nyu2543sp5t5hnj4k3999vqdpjez9ew0ma5w7s66nu2ct2v37jflr5v0y3j5qq9qyyssqsagc4knpgysl7d6wvz305hd8hqcz3tclzelt9est9c9ksx4dpuqhgeycdwmd7smdpnsnfdadwnq5q2yhxqllkaxar35jjhqgexvluaqp0mtuzx","onchainAddress":"bc1qnhlaufynawqhjwjrkvhuzpcm3nyu2543mpxwmn","expiration":"2022-11-04T20:33:24.716+00:00","expirationInSec":117,"targetAmount":{"currency":"USD","amount":"10.99"},"sourceAmount":{"currency":"BTC","amount":"0.0005213"},"conversionRate":{"amount":"21081.9106","sourceCurrency":"BTC","targetCurrency":"USD"}}'
+      string: '{"quoteId":"643dbf45-3fe6-44bf-a8da-3f6041c3aabe","description":"Invoice
+        for order 123","lnInvoice":"lnbc516360n1p3kvlwupp552sfuypas9q406ratpg6myzjdq25d6ceqspxlf6hfgad32aljc0sdpzf9h8vmmfvdjjqen0wgsx7unyv4ezqvfjxvcqzpgxqzr4fppqh9p7w65cc56jt8nyks9tzgvcqxgpgndhsp5lvddzf2tn2gymvugc96jc5mk4vfh7feprwml5k8zp2zn9urc9fgq9qyyssqvvnl2jrsyezmuze244s4qcd0vtp3sar08fufyxj8za7j2qjqa85h3ktx9258e6ujks0ps0zh46kgvaml9pamyp36xa00hx2amly87jgqk4m6d5","onchainAddress":"bc1qh9p7w65cc56jt8nyks9tzgvcqxgpgndhjtqcfc","expiration":"2022-11-05T15:16:34.206+00:00","expirationInSec":117,"targetAmount":{"currency":"USD","amount":"10.99"},"sourceAmount":{"currency":"BTC","amount":"0.00051636"},"conversionRate":{"amount":"21283.6006","sourceCurrency":"BTC","targetCurrency":"USD"}}'
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 76501cfe6b0b2968-ORD
+      - 76568a3eeb992d8e-ORD
       Connection:
       - keep-alive
       Content-Length:
-      - '754'
+      - '755'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Nov 2022 20:31:26 GMT
+      - Sat, 05 Nov 2022 15:14:36 GMT
       Location:
-      - https://api.strike.me/v1/quotes/520b6082-185f-46e6-9b70-a72053420ca2
+      - https://api.strike.me/v1/quotes/643dbf45-3fe6-44bf-a8da-3f6041c3aabe
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=tdU0764lu4eZ.MmdE1W6pC26bTNRH4hpwv4sIP36FSY-1667593886-0-ARkCSJUpWoYVvr9o2zEKwB97M6wscQYgJsho58XyhpU49/br4/QRdkuLWhY4HdWT7xp3ZaSfj8wDnhK/MrsPKN0=;
-        path=/; expires=Fri, 04-Nov-22 21:01:26 GMT; domain=.strike.me; HttpOnly;
+      - __cf_bm=1tawevolb.FaLq6JuDncmBz_PTFvrkBqmFRDp7JdG24-1667661276-0-AVaJxWuZKJcUctos1JWew2CwanA+l5kgh4nnuge6Qunc5bO3fOUobgY5rPXGzk98kyYncSgLl64TfCwh7aQF7Dg=;
+        path=/; expires=Sat, 05-Nov-22 15:44:36 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=300; includeSubDomains

@@ -1,6 +1,7 @@
 from __future__ import annotations
 import uuid
 
+from requests.exceptions import HTTPError
 import pytest
 
 from strike_api.invoices import (
@@ -19,25 +20,21 @@ def vcr_config():
 
 @pytest.mark.vcr
 def test_get_invoices():
-    response = get_invoices()
-    invoice_list = response["items"]
-    count = response["count"]
+    invoice_items = get_invoices()
+    invoices = invoice_items.items
+    count = invoice_items.count
 
-    assert isinstance(response, dict)
-    assert isinstance(invoice_list, list)
+    assert isinstance(invoices, list)
     assert isinstance(count, int)
 
 
 @pytest.mark.vcr
 def test_get_invoice_not_found():
     invoice_id = "fb0c113e-dc9a-45c5-a491-1b036bc8ac7a"
-    response = get_invoice(invoice_id)
-    data = response["data"]
-    status = data["status"]
 
-    assert isinstance(response, dict)
-    assert isinstance(data, dict)
-    assert status == 404
+    with pytest.raises(HTTPError) as excinfo:
+        get_invoice(invoice_id)
+    assert "404 Client Error" in str(excinfo.value)
 
 
 @pytest.mark.vcr
@@ -47,16 +44,14 @@ def test_issue_invoice():
     currency = "USD"
     amount = "1.00"
 
-    response = issue_invoice(
+    invoice = issue_invoice(
         correlation_id=correltion_id,
         description=description,
         currency=currency,
         amount=amount,
     )
 
-    assert "state" in response
-    invoice_state = response["state"]
-    assert invoice_state == "UNPAID"
+    assert invoice.state == "UNPAID"
 
 
 @pytest.mark.vcr
@@ -67,7 +62,7 @@ def test_issue_invoice_for_handle():
     currency = "USD"
     amount = "1.00"
 
-    response = issue_invoice(
+    invoice = issue_invoice(
         handle=handle,
         correlation_id=correltion_id,
         description=description,
@@ -75,31 +70,21 @@ def test_issue_invoice_for_handle():
         amount=amount,
     )
 
-    assert "state" in response
-    invoice_state = response["state"]
-    assert invoice_state == "UNPAID"
+    assert invoice.state == "UNPAID"
 
 
 @pytest.mark.vcr
 def test_cancel_invoice_not_found():
     invoice_id = "168722cd-8f0a-4a1e-8241-e79a7b9722be"
 
-    response = cancel_invoice(invoice_id)
-
-    data = response["data"]
-    status = data["status"]
-
-    assert isinstance(response, dict)
-    assert isinstance(data, dict)
-    assert status == 404
+    with pytest.raises(HTTPError) as excinfo:
+        cancel_invoice(invoice_id)
+    assert "404 Client Error" in str(excinfo.value)
 
 
 @pytest.mark.vcr
 def test_issue_quote():
     invoice_id = "5f8a40b4-910f-439d-9a61-81fae87f0a8e"
 
-    response = issue_quote(invoice_id)
-
-    assert "quoteId" in response
-    quote_id = response["quoteId"]
-    assert len(quote_id) > 0
+    quote = issue_quote(invoice_id)
+    assert len(quote.quote_id) > 0

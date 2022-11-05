@@ -1,12 +1,13 @@
 import typing
 
 from strike_api.base import call_api
+from strike_api.models.accounts import Account
 
 
 def get_account(
     account_id: typing.Optional[str] = None,
     handle: typing.Optional[str] = None,
-) -> dict:
+) -> Account:
     """Fetch public account profile info by id or handle
 
     Args:
@@ -15,7 +16,6 @@ def get_account(
 
     Returns:
         dict: account schema
-
     """
 
     url = ""
@@ -26,4 +26,5 @@ def get_account(
     else:
         raise ValueError("use either account_id or handle")
 
-    return call_api("GET", url)
+    response = call_api("GET", url)
+    return Account.parse_obj(response)

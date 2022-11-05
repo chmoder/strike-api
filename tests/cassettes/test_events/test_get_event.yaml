@@ -11,30 +11,31 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: GET
-    uri: https://api.strike.me/v1/invoices/fb0c113e-dc9a-45c5-a491-1b036bc8ac7a
+    uri: https://api.strike.me/v1/events/1552121f-ce10-4f15-894f-332516afd3cb
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAyTIsQqDMBAG4FeRfw4lFLvcrKUFa8DqLEdydaoB7zKJ716k3/jtsI2jPBMI/vHq
-        xjZ0t3c7NOT/rnBIbAzaocZWFFT72iHmJCD0YZzvYeobOHxFlZdzB9FctijVmq365LKmC47jBwAA
-        //8DAOFxqSFtAAAA
+        H4sIAAAAAAAAAzTNQW6DMBAF0Lv8bZloZowb7Bt03Sh7Y8aq1QgqcIlQlLtXWfQC7z1QJ0SI9yoq
+        hbIJU1/E0xD6Qs6pl/dUJpdHdLDd5nY5fgwRdd6Xmu2UV0vNJnS42/i1LN9XW7e6zIjYBR2m1BLi
+        Aza32o6P16ZuLE48kxuGQP3glcazKKXAPqQSzlMoeHb4pyOUVUmEuL8oRydR/SmoU69vzJH59dit
+        7rYen78527YhlnTb7PkHAAD//wMAJ5ojWuEAAAA=
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 76568a376ffe2bf4-ORD
+      - 76568a34a9dee213-ORD
       Connection:
       - keep-alive
       Content-Encoding:
       - gzip
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Date:
       - Sat, 05 Nov 2022 15:14:34 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=aDdoRqT0_16jCEu6kjFSlp7L_hUh6owNeP7w42EJ2tY-1667661274-0-AX4Hq8kAPFVpy3XcJ54GQbWg1yVt3uKvIU1m7gwqbRqdICohwatplk7uGJ6eCph5ZR5fgDXH7O8aVHHlKKhSnC4=;
+      - __cf_bm=rrSR3NQj7bv0bAElG2XD28ecl31I1SztYF0O9McD5M8-1667661274-0-AX2EHtwogJBu46WxRTRwrUHo89ZEMsA1UHeVcN/uEyC2E/9VCcb6F7Eotu3Xiu1EXqG2nCZHm3bbe2Uew439+JY=;
         path=/; expires=Sat, 05-Nov-22 15:44:34 GMT; domain=.strike.me; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
@@ -46,6 +47,6 @@ interactions:
       X-Content-Type-Options:
       - nosniff
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
 version: 1

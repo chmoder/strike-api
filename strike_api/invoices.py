@@ -2,11 +2,16 @@ import json
 import typing
 
 from strike_api.base import call_api
+from strike_api.models.invoices import Invoice, InvoiceItems
+from strike_api.models.quotes import Quote
 
 
 def get_invoices(
-    filter_: str = None, orderby: str = None, skip: int = None, top: int = None
-) -> dict:
+    filter_: typing.Optional[str] = None,
+    orderby: typing.Optional[str] = None,
+    skip: typing.Optional[int] = None,
+    top: typing.Optional[int] = None,
+) -> InvoiceItems:
     """Get Invoices
     Required scopes: partner.webhooks.manage
     OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`_.
@@ -24,10 +29,11 @@ def get_invoices(
 
     payload = {"filter": filter_, "orderby": orderby, "skip": skip, "top": top}
 
-    return call_api("GET", url, params=payload)
+    response = call_api("GET", url, params=payload)
+    return InvoiceItems.parse_obj(response)
 
 
-def get_invoice(invoice_id: str) -> dict:
+def get_invoice(invoice_id: str) -> Invoice:
     """get invoice by id
 
     Args:
@@ -38,16 +44,17 @@ def get_invoice(invoice_id: str) -> dict:
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}"
 
-    return call_api("GET", url)
+    response = call_api("GET", url)
+    return Invoice.parse_obj(response)
 
 
 def issue_invoice(
     handle: typing.Optional[str] = None,
-    correlation_id: str = None,
-    description: str = None,
-    currency: str = None,
-    amount: str = None,
-) -> dict:
+    correlation_id: typing.Optional[str] = None,
+    description: typing.Optional[str] = None,
+    currency: typing.Optional[str] = None,
+    amount: typing.Optional[str] = None,
+) -> Invoice:
     """Issue a new invoice
 
     Only currencies which are invoiceable for the caller's account can be used. Invoiceable currencies can be found using get account profile endpoint.
@@ -77,10 +84,11 @@ def issue_invoice(
 
     headers = {"Content-Type": "application/json"}
 
-    return call_api("POST", url, headers=headers, data=payload)
+    response = call_api("POST", url, headers=headers, data=payload)
+    return Invoice.parse_obj(response)
 
 
-def issue_quote(invoice_id: str) -> dict:
+def issue_quote(invoice_id: str) -> Quote:
     """Issue a new quote for specified invoice
 
     Args:
@@ -93,10 +101,11 @@ def issue_quote(invoice_id: str) -> dict:
 
     headers = {"Content-Length": "0"}
 
-    return call_api("POST", url, headers=headers)
+    response = call_api("POST", url, headers=headers)
+    return Quote.parse_obj(response)
 
 
-def cancel_invoice(invoice_id: str) -> dict:
+def cancel_invoice(invoice_id: str) -> Invoice:
     """Cancel an unpaid invoice
 
     Args:
@@ -107,4 +116,5 @@ def cancel_invoice(invoice_id: str) -> dict:
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}/cancel"
 
-    return call_api("PATCH", url)
+    response = call_api("PATCH", url)
+    return Invoice.parse_obj(response)
