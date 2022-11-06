@@ -3,7 +3,7 @@ name: Test strike-api
 on: [push]
 
 env:
-  PYTHON_VERSION: "3.8"
+  PYTHON_VERSION: "3.7"
   PACKAGE_FOLDER: strike_api
   TEST_FOLDER: tests
   COVERAGE_LIMIT: 90
