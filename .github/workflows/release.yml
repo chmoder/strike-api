@@ -12,3 +12,5 @@ jobs:
         uses: JRubics/poetry-publish@v1.13
         with:
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
+      - name: Purge pypi badge image
+        run: curl -X PURGE https://camo.githubusercontent.com/bc470fbaf8e4fbe548c7d77b53afc1628c41e8e29b00dfca4da14fdf9037c1b5/68747470733a2f2f62616467652e667572792e696f2f70792f737472696b652d6170692e737667
