@@ -15,7 +15,7 @@ def get_account(
         handle (typing.Optional[str]): Handle attached to the account to fetch
 
     Returns:
-        dict: account schema
+        Account: account schema
     """
 
     url = ""
