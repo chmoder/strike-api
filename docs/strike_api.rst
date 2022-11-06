@@ -1,6 +1,17 @@
 Strike API
 ===================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   strike_api.models
+
+Submodules
+----------
+
 Accounts
 ---------------------------
 
@@ -49,3 +60,10 @@ Subscriptions
    :undoc-members:
    :show-inheritance:
 
+Module contents
+---------------
+
+.. automodule:: strike_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
