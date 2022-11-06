@@ -9,9 +9,8 @@ def get_subscriptions() -> Subscriptions:
     """Get subscriptions
 
     Returns:
-        typing.List[dict]: list of subscriptions
+        Subscriptions: list of subscriptions
     """
-
     url = f"https://api.strike.me/v1/subscriptions"
 
     response = call_api("GET", url)
@@ -25,7 +24,7 @@ def get_subscription(subscription_id: str) -> Subscription:
         subscription_id (str): id of subscription
 
     Returns:
-        dict: subscription
+        Subscription: subscription
     """
     url = f"https://api.strike.me/v1/subscriptions/{subscription_id}"
 
@@ -42,9 +41,7 @@ def create_subscription(
     enabled: bool,
     event_type: typing.List[str],
 ) -> Subscription:
-    """Create a new subscription
-
-    You can create at most 50 subscriptions
+    """Creates a new subscription.  You can create at most 50 subscriptions.
 
     Args:
         webhook_url (str): Webhook HTTPS endpoint url.
@@ -54,7 +51,7 @@ def create_subscription(
         event_type (typing.List[str]): List of event types for the subscription. Each time that some event type from the list occurs, the webhook will be triggered.
 
     Returns:
-        dict: subscription
+        Subscription: The created subscription.
     """
     url = "https://api.strike.me/v1/subscriptions"
 
@@ -82,7 +79,7 @@ def update_subscription(
     enabled: bool,
     event_type: typing.List[str],
 ) -> Subscription:
-    """Update a subscription
+    """Update a subscription.
 
     Args:
         subscription_id (str): Id of subscription to update.
@@ -93,7 +90,7 @@ def update_subscription(
         event_type (typing.List[str]): List of event types for the subscription. Each time that some event type from the list occurs, the webhook will be triggered.
 
     Returns:
-        dict: _description_
+        Subscription: The updated subscription.
     """
     url = f"https://api.strike.me/v1/subscriptions/{subscription_id}"
 
@@ -116,10 +113,10 @@ def delete_subscription(subscription_id: str) -> None:
     """Delete a subscription
 
     Args:
-        subscription_id (str): Id of subscription to update
+        subscription_id (str):  Id of subscription to delete
 
     Returns:
-        dict: subscription
+        None
     """
     url = f"https://api.strike.me/v1/subscriptions/{subscription_id}"
 

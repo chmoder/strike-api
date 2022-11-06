@@ -5,10 +5,8 @@ from strike_api.models.rates import Rates
 def get_ticker() -> Rates:
     """Get currency exchange rate tickers
 
-    Response will include list of all possible pairs for the following currencies: BTC, USD, USDT
-
     Returns:
-        dict: ticker rates
+        Rates: list of all possible pairs for the following currencies: BTC, USD, USDT
     """
     url = f"https://api.strike.me/v1/rates/ticker"
 

@@ -12,18 +12,18 @@ def get_invoices(
     skip: typing.Optional[int] = None,
     top: typing.Optional[int] = None,
 ) -> InvoiceItems:
-    """Get Invoices
+    """Get invoices with optional search criteria.
     Required scopes: partner.webhooks.manage
     OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`_.
 
     Args:
-        filter_ (str, optional): Filter the results using OData syntax. Supported properties: invoiceId, created, currency, state, issuerId, receiverId, payerId, correlationId. Defaults to None.
-        orderby (str, optional): Order the results using OData syntax. Supported properties: created. Defaults to None.
-        skip (int, optional): Skip the specified number of entries. Defaults to None.
-        top (int, optional): Get the top X number of records. Default value: 50. Max value: 100. Defaults to None.
+        filter_ (typing.Optional[str], optional): Filter the results using OData syntax. Supported properties: invoiceId, created, currency, state, issuerId, receiverId, payerId, correlationId.. Defaults to None.
+        orderby (typing.Optional[str], optional): Order the results using OData syntax. Supported properties: created. Defaults to None.
+        skip (typing.Optional[int], optional): Skip the specified number of entries. Defaults to None.
+        top (typing.Optional[int], optional): Get the top X number of records. Default value: 50. Max value: 100. Defaults to None.
 
     Returns:
-       dict: invoices
+        InvoiceItems: List of invoices and a count
     """
     url = "https://api.strike.me/v1/invoices"
 
@@ -34,13 +34,13 @@ def get_invoices(
 
 
 def get_invoice(invoice_id: str) -> Invoice:
-    """get invoice by id
+    """Gets an invoice by it's id
 
     Args:
-        invoice_id (str): Invoice id
+        invoice_id (str): An invoice id
 
     Returns:
-        dict: invoice
+        Invoice: invoice
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}"
 
@@ -56,18 +56,17 @@ def issue_invoice(
     amount: typing.Optional[str] = None,
 ) -> Invoice:
     """Issue a new invoice
-
-    Only currencies which are invoiceable for the caller's account can be used. Invoiceable currencies can be found using get account profile endpoint.
+        Only currencies which are invoiceable for the caller's account can be used. Invoiceable currencies can be found using get account profile endpoint.
 
     Args:
         handle (typing.Optional[str], optional): handle, if specifying a receiver. Defaults to None.
-        correlation_id (str, optional): Invoice correlation id. Must be a unique value. Can be used to correlate the invoice with an external entity. Defaults to None.
-        description (str, optional): Invoice description. Defaults to None.
-        currency (str, optional): Currency code [BTC, USD, EUR, USDT, GBP]. Defaults to None.
-        amount (str, optional): Currency amount in decimal format. Defaults to None.
+        correlation_id (typing.Optional[str], optional): Invoice correlation id. Must be a unique value. Can be used to correlate the invoice with an external entity. Defaults to None.
+        description (typing.Optional[str], optional): Invoice description. Defaults to None.
+        currency (typing.Optional[str], optional): Currency code [BTC, USD, EUR, USDT, GBP]. Defaults to None.
+        amount (typing.Optional[str], optional): Currency amount in decimal format. Defaults to None.
 
     Returns:
-        dict: invoice
+        Invoice: _description_
     """
     if handle:
         url = f"https://api.strike.me/v1/invoices/handle/{handle}"
@@ -95,7 +94,7 @@ def issue_quote(invoice_id: str) -> Quote:
         invoice_id (str): Id of invoice for which the quote is requested
 
     Returns:
-        dict: quote
+        Quote: quote
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}/quote"
 
@@ -112,7 +111,7 @@ def cancel_invoice(invoice_id: str) -> Invoice:
         invoice_id (str): Id of invoice for which the cancellation is requested
 
     Returns:
-        dict: invoice
+        Invoice: invoice
     """
     url = f"https://api.strike.me/v1/invoices/{invoice_id}/cancel"
 

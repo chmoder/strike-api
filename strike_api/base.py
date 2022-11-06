@@ -9,10 +9,13 @@ def set_default_headers(
     """Sets the default headers for strike api HTTP requests
 
     Args:
-        headers (typing.Optional[dict], optional): HTTP Headers. Defaults to None.
+        headers (typing.Optional[typing.Dict[str, str]], optional): HTTP Headers. Defaults to None.
+
+    Raises:
+        EnvironmentError: When STRIKE_API_KEY is not found in system environment variables
 
     Returns:
-        dict: headers with default headers included
+        typing.Dict[str, str]: headers with default headers included
     """
     strike_api_key = os.environ.get("STRIKE_API_KEY")
     if not strike_api_key:
@@ -41,17 +44,13 @@ def call_api(
     Args:
         method (str): HTTP Method
         url (str): Fully qualifed url to interact with a strike endpoint
-        headers (typing.Optional[dict], optional): HTTP Headers. Defaults to None.
-        params (typing.Optional[typing.Union[dict, str]], optional): params to pass to Strike as query string. Defaults to None.
-        data (typing.Optional[typing.Union[dict, str]], optional): Data to pass to Strike as body. Defaults to None.
-
-    Raises:
-        EnvironmentError: The Strike API key must be in env
+        headers (typing.Optional[typing.Dict[str, str]], optional): HTTP Headers. Defaults to None.
+        params (typing.Optional[typing.Union[typing.Dict[str, typing.Any], str]], optional): params to pass to Strike as query string. Defaults to None.
+        data (typing.Optional[typing.Union[typing.Dict[str, str], str]], optional): Data to pass to Strike as body. Defaults to None.
 
     Returns:
-        typing.Any: response from api call
+        typing.Union[ typing.Dict[str, typing.Any], typing.List[typing.Dict[str, typing.Any]] ]: response from api call
     """
-
     headers = set_default_headers(headers)
     response = requests.request(method, url, headers=headers, params=params, data=data)
     response.raise_for_status()
