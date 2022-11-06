@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 class StrikeAPIModel(BaseModel):
     class Config:
-        alias_generator = humps.camelize # type: ignore
+        alias_generator = humps.camelize  # type: ignore
 
 
 class ItemsResponse(StrikeAPIModel):

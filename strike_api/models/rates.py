@@ -15,7 +15,7 @@ class Rate(StrikeAPIModel):
 class Rates(StrikeAPIModel):
     __root__: List[Rate]
 
-    def __iter__(self) -> typing.Iterable[Rate]: # type: ignore
+    def __iter__(self) -> typing.Iterable[Rate]:  # type: ignore
         return iter(self.__root__)
 
     def __getitem__(self, index: int):

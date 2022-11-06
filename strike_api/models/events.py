@@ -21,7 +21,7 @@ class Event(StrikeAPIModel):
 class Events(StrikeAPIModel):
     __root__: typing.List[Event]
 
-    def __iter__(self) -> typing.Iterator[Event]: # type: ignore
+    def __iter__(self) -> typing.Iterator[Event]:  # type: ignore
         return iter(self.__root__)
 
     def __getitem__(self, index: int):
