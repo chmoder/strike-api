@@ -1,17 +1,6 @@
 Strike API
 ===================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   strike_api.models
-
-Submodules
-----------
-
 Accounts
 ---------------------------
 
