@@ -32,10 +32,10 @@ class Invoice(StrikeAPIModel):
 class Invoices(StrikeAPIModel):
     __root__: typing.List[Invoice]
 
-    def __iter__(self):
+    def __iter__(self) -> typing.Iterator[Invoice]:
         return iter(self.__root__)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index: int):
         return self.__root__[index]
 
 
