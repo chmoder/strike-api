@@ -6,7 +6,12 @@ A python client for the https://strike.me API.  This client uses pydantic and en
 [![codecov](https://codecov.io/github/chmoder/strike-api/branch/main/graph/badge.svg?token=JR81BI9IGR)](https://codecov.io/github/chmoder/strike-api)
 
 
-## Example Usage
+## Installation
+### Prerequisites
+- Python version 3.7+
+
+
+## Quick Start
 `$ export STRIKE_API_KEY=<STRIKE_API_KEY>`
 ```python
 from strike_api import rates
