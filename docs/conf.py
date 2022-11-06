@@ -24,6 +24,7 @@ author = "Thomas Cross"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
+    "sphinxcontrib.autodoc_pydantic",
     "sphinx.ext.napoleon",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
@@ -76,3 +77,4 @@ html_static_path = ["_static"]
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#configuration
 
 todo_include_todos = True
+autosummary_generate = True
