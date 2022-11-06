@@ -49,3 +49,10 @@ Subscriptions
    :undoc-members:
    :show-inheritance:
 
+Module contents
+---------------
+
+.. automodule:: strike_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

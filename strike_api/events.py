@@ -28,7 +28,7 @@ def get_events(
 ) -> EventItems:
     """Gets a list of events matching optional search criteria.
     Required scopes: partner.webhooks.manage
-    OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`_.
+    OData filtering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/7d6c4117-317d-4860-915b-7e321be017e3>`_.  Ordering syntax can be seen `here <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-odata/793b1e83-95ee-4446-8434-f5b634f20d1e>`__.
 
     Args:
         filter_ (typing.Optional[str], optional): Filter the results using OData syntax. Supported properties: created, eventType, deliverySuccess.. Defaults to None.

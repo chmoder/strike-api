@@ -25,6 +25,7 @@ sphinx = "^5.3.0"
 black = "^22.10.0"
 sphinx-rtd-theme = "^1.0.0"
 pytest-recording = "^0.12.1"
+autodoc-pydantic = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
